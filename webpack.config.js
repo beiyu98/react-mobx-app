@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    target:'web',
     entry: path.resolve(__dirname, 'src'),
     output: {
         filename: '[name].[hash].js',
@@ -32,12 +33,17 @@ module.exports = {
                 viewport: 'width=device-width,initial-scale=1',
             },
             inject:true,
-            hash:true,
+            favicon:path.resolve(__dirname,'assets','react.svg'),//?不起作用
         })
     ],
     devServer:{
         host:'127.0.0.1',
         port:8090,
         open:true,
-    } 
+    },
+    resolve:{
+        alias:{
+            
+        }
+    }
 }

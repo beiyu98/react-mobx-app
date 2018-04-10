@@ -3,6 +3,14 @@
         "env","react"
     ],
     "plugins": [
-        "transform-decorators"
+        "transform-decorators",
+        [
+            "import", 
+            {
+                "libraryName": "antd",
+                "libraryDirectory": "es",
+                "style": "css"
+            }
+        ]
     ]
 }
